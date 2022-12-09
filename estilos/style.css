@@ -1,0 +1,251 @@
+body{
+    background-color: gray;
+    text-align: center;
+}
+h1{
+    font-size: 20px;
+    font-weight: bold;
+}
+h2{
+    font-size: 14px;
+    font-weight: bold;
+}
+                                    /* CABECERA PRINCIPAL*/
+.principal{
+    width: 80%;
+    margin: auto;
+    background-color: gray;
+
+
+}
+
+                                     /* HEADER*/
+header{
+    background-color: #fffbb9;
+    padding: 20px;
+    border-top: 1px black solid;
+    border-left: 1px black solid;
+    border-right: 1px black solid;
+}
+.cabecera h1{
+    text-align: left;
+}
+
+                                     /* NAV*/
+.menu{
+    border: 1px black solid;
+    background: #ccc;
+    padding: 0px;
+    text-align: center;
+}
+.menu li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px;
+}
+.menu li a{
+    text-decoration: none;
+}
+
+                                    /* SECTION*/
+.contenido{
+    margin: 20px;
+    width: 70%;
+    float: left;
+}
+.foto1{
+    width: 255px;
+    height: 340px;
+    border-radius: 0.5rem;
+    border: 3px gray solid;
+}
+article{
+    background-color: #fffbcc;
+    border: 1px black solid;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+time{
+    color: #999;
+}
+
+ /* sobre mi*/
+.colum1 p{
+    text-align: cent    er;
+    width: 90%;
+    column-count:3;	
+    margin: auto;
+    padding: 10px;
+}
+.grupo1{
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    border: 3px gray solid;
+}
+
+/* cv */
+table{
+    padding: 5px;
+}
+
+.caja1{
+
+    width: 250px;
+    background-color: rgb(40, 40, 131);
+}
+.caja2{
+    height: 1000px;
+    width: 480px;
+    background-color: rgb(235, 228, 228);
+}
+.nombre{
+    color: white;
+    text-align: left;
+    font-size: 25px;
+    
+}
+.nacimiento{
+    color: white;
+    text-align: left;
+    font-size: 15px;
+}
+.nacionalidad{
+    color: white;
+    text-align: left;
+    font-size: 15px;
+}
+.genero{
+    color: white;
+    text-align: left;
+    font-size: 15px;
+}
+.contacto{
+    color: white;
+    text-align: left;
+    font-size: 20px;
+}
+.calle{
+    color: white;
+    text-align: left;
+    font-size: 15px;
+}
+
+.cajatwo{
+    text-align: left;
+    position: relative;
+
+}
+
+/* formulario */
+
+form{
+    text-align: center;
+    width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #24303c9d;
+    border-radius: 4px;
+    color: white;
+}
+form h4{
+    font-size: 20px;
+}
+select{
+    border-radius: 5px;
+    width: 420px;
+    padding: 10px;
+}
+.inp{
+    border-radius: 5px;
+    width: 400px;
+    padding: 10px;
+}
+.interes{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+textarea{
+    border: 3px rgb(42, 140, 165) solid;
+    border-radius: 5px;
+    width: 400px;
+}
+/* video*/
+.v{
+    width: 100%;
+    margin: 20px;
+}
+.video{
+    width: 80%;
+    height: auto;
+}
+
+                                    /* ASIDE*/
+.columna{
+    background-color: #fff98a;
+    border: 1px black solid;
+    width: 20%;
+    margin: 20px;
+    float: left;
+}
+.foto2{
+    width: 160px;
+    height: 212px;  
+    border-radius: 0.5rem;
+    border: 3px gray solid;
+
+}
+.site1{
+    width: 160px;
+    height: 230px;  
+    border-radius: 0.5rem;
+    border: 3px gray solid;
+
+}
+.site2{
+    width: 160px;
+    height: 230px;  
+    border-radius: 0.5rem;
+    border: 3px gray solid;
+
+}
+.foto6{
+    width: 160px;
+    height: 230px;  
+    border-radius: 0.5rem;
+    border: 3px gray solid;
+
+}
+.columna blockquote{
+    margin: 20px;
+}
+.columna p{
+    text-align: left;
+    font-size: 15px;
+    padding: 2px;
+}
+.columna p a{
+    text-decoration: none;
+    color: blue;
+}
+/* formulario*/
+
+.insta{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+.face{
+    width: 60px;
+    height: 60px;
+    margin: 10px;
+}
+                                    /* FOOTER*/
+.final{
+    clear: both;
+    color: white;
+    background: #2d3436;
+    border: 1px black solid;
+    padding: 10px;
+}
