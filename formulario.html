@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <link rel="stylesheet" href="./estilos/style.css">
+
+</head>
+<body>
+    <div class="principal">
+        <header class="cabecera">
+            <h1>Proyecto de Aplicaciones Web!!!</h1>
+        </header>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="./index.html">Inicio</a></li>
+                <li><a href="./sobre mi.html">Sobre Mi</a></li>
+                <li><a href="./cv.html">CV</a></li>
+                <li><a href="./formulario.html">Formulario</a></li>
+            </ul>
+        </nav>
+
+        <section class="contenido">
+            <article>
+                <form>
+                    <h4>Formulario para Contactarme</h4>
+                    <input type="text" placeholder="Tu Nombre" class="inp"><br><br>
+                    <input type="text" placeholder="Empresa" class="inp"><br><br>
+                    <select name="Pais" id="pais">
+                        <option value="">Elije un Pais</option>
+                        <option value="">España</option>
+                        <option value="">Francia</option>
+                        <option value="">Italia</option>
+                        <option value="">Reino unido</option>
+                        <option value="">Alemania</option>
+                        <option value="">Suiza</option>
+                        <option value="">Otro pais</option>
+                        
+                    </select><br><br>
+                    <input type="number" placeholder="Telefono" class="inp"><br><br>
+                    <input type="email" placeholder="Correo Electronico" class="inp"><br><br>
+                    <input type="date" name="Dia" id="dia" class="inp"><br><br>
+                    <input type="time" name="hora" class="inp"><br><br> 
+                    <input type="radio" name="sexo">Masculino
+                    <input type="radio" name="sexo">Femenino <br><br>
+                    <label for="Interes" class="interes" >Interesado para :</label><br><br>
+                    <input type="checkbox">Obtener una entrevista
+                    <input type="checkbox">Pregunta acerca de la pagina<br><br>
+                    <textarea name="escribe" id="escribe" cols="30" rows="5"></textarea><br><br>
+                    <label for="Archivo" class="interes">Si quieres adjuntar archivos :</label><br><br>
+                    <input type="file"><br><br>
+
+
+
+                    <input type="submit"> <input type="reset">
+                </form>
+            </article>
+           
+
+         </section>
+
+        <aside class="columna">
+            
+            <blockquote>
+                
+                <p>
+                    Gracias por haber visto mi pagina web. Si quieres contactar conmigo, rellene el 
+                    formulario y asi nos pondremos en contacto. Igual aqui dejo mis redes sociales:
+                </p>
+                <a href="https://www.instagram.com/sisa_ismael/"><img src="./img/insta.png" alt="insta" class="insta"></a>
+                <a href="https://ms-my.facebook.com/ismael.sisa"><img src="./img/face.png" alt="face" class="face"></a>
+            </blockquote>
+            
+
+        </aside>
+
+        <footer class="final">
+            Proyecto de Sisa
+        </footer>
+    </div>
+</body>
+</html>
