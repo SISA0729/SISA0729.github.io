@@ -1,13 +1,23 @@
-# 🌐 Mi Página Web Personal
+# 🏢 Sitio Web Corporativo – [Nombre de la Empresa]
 
-¡Bienvenid@ al repositorio de **mi sitio web personal**! 🚀  
-Alojado en GitHub Pages y hecho con amor 💖, HTML, CSS y muchas ganas de aprender 💻✨
+Este repositorio contiene el código fuente del sitio web desarrollado para **DISNAMAIR**, una solución moderna, responsiva y visualmente atractiva para representar su presencia digital. 🌐
 
-## 📁 Estructura del Proyecto
+---
 
-- `index.html` – Página principal 🏠  
-- `style.css` – Estilos para que se vea bonita 🎨  
-- `img/` – Imágenes usadas en la web 📸
+## 📌 Descripción del Proyecto
+
+El objetivo del sitio web es brindar una plataforma informativa y visual para que los visitantes puedan conocer mejor a **DISNAMAIR**, sus productos, servicios y visión.  
+Fue diseñado con enfoque en simplicidad, usabilidad y una experiencia visual clara para el usuario final.
+
+---
+
+## 🛠️ Tecnologías Utilizadas
+
+- 🧱 **HTML5** – Estructura del contenido  
+- 🎨 **CSS3** – Estilización y diseño visual  
+- 🖼️ **Assets personalizados** – Imágenes de branding e identidad de la empresa  
+
+---
 
 ## 👀 ¿Dónde verlo?
 
