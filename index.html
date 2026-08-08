@@ -1,254 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Disnamair</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="./img/Iconos/disnamair.png">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#02030a">
+  <meta name="description" content="Un pequeño universo creado para ti.">
+  <title>Nuestro universo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="galaxy-interaction.css">
+  <link rel="stylesheet" href="letter-content.css">
 </head>
-<body>
-    <section id="header">
-        <a href="#"><img src="./img/Logo/Disnamair.png" class="logo" alt="" width="20%"></a>
+<body class="is-loading">
+  <div class="loader" id="loader" role="status" aria-live="polite">
+    <div class="loading-scene" id="loadingScene" aria-hidden="true">
+      <div class="loader-face">
+        <span class="face-angry">&#128544;</span>
+        <span class="face-happy">&#129392;</span>
+        <span class="comic-bubble">Te extraño</span>
+      </div>
+      <div class="heart-loader">
+        <svg viewBox="0 0 120 108">
+          <defs>
+            <linearGradient id="heartGradient" x1="0" y1="1" x2="1" y2="0">
+              <stop offset="0" stop-color="#ff3868"/>
+              <stop offset="1" stop-color="#ff86a3"/>
+            </linearGradient>
+            <clipPath id="heartClip">
+              <path d="M60 101C50 91 10 65 10 34C10 14 34 5 49 18C55 23 60 31 60 31C60 31 65 23 71 18C86 5 110 14 110 34C110 65 70 91 60 101Z"/>
+            </clipPath>
+          </defs>
+          <path class="heart-outline" d="M60 101C50 91 10 65 10 34C10 14 34 5 49 18C55 23 60 31 60 31C60 31 65 23 71 18C86 5 110 14 110 34C110 65 70 91 60 101Z"/>
+          <g clip-path="url(#heartClip)"><rect class="heart-fill" id="heartFill" x="0" y="108" width="120" height="108"/></g>
+        </svg>
+        <span class="heart-shine"></span>
+      </div>
+    </div>
+  </div>
 
-        <div>
-            <ul id="navbar">
-                <li><a class="active" href="index.html">Pepe</a></li>
-                <li><a  href="productos.html">Productos</a></li>
-                <li><a  href="blog.html">Blog</a></li>
-                <li><a  href="contacto.html">Contacto</a></li>
-                <li><a  href="carrito.html"><img src="./img/Iconos/carrito.png" alt="" width="18px"></a></li>
+  <div class="reveal-curtain" id="revealCurtain" aria-hidden="true"></div>
 
-            </ul>
-        </div>
-    </section>
-    <section id="hero">
-        <h4>¡Ofertas irresistibles por tu equipo usado!</h4>
-        <h2> Descuentos increíbles</h2>
-        <h1>En todos nuestros productos</h1>
-        <p>¡Ahorra más con cupones y hasta un 70% de descuento!</p>
-        <button>Comprar Ahora!!</button>
-    </section>
-    
-    <section id="product1" class="section-p1">
-        <h2>Productos Destacados</h2>
-        <p>Innovación en Maquinaria de Pintura 2024</p>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./img/Productos/Maquinas/WIWA 3022 COMBI.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Maquinas/SP380.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Equipo Airlessco SP-380</span>
-                    <h5>Equipo con bomba electrica</h5>
-                    <h4>1.495 $</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Maquinas/LP555.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Equipo Airlessco LP-555</span>
-                    <h5>Equipo LITTLE PRO HB </h5>
-                    <h4>3.460 $</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Maquinas/WIWA 24071.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Maquinas/GR100RCS.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Maquinas/MP455.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Equipo Airlessco MP-455</span>
-                    <h5>Equipo con bomba electrica de piston</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Pistolas/Pistolas-airless-WIWA.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Filtros/Filtros-de-culata.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-        </div>
-    </section>
+  <main class="universe" id="universe">
+    <canvas id="spaceCanvas" aria-label="Fondo animado de estrellas en el espacio"></canvas>
+    <div class="space-vignette" aria-hidden="true"></div>
+    <div class="orbiting-memories" id="orbitingMemories">
+      <button class="space-memory" data-radius=".32" data-angle=".2"><img src="img/celeste/BAQUEROS.jpeg" alt="Nuestro recuerdo 1"></button>
+      <button class="space-memory" data-radius=".46" data-angle="1.4"><img src="img/celeste/BESO.jpeg" alt="Nuestro recuerdo 2"></button>
+      <button class="space-memory" data-radius=".58" data-angle="2.5"><img src="img/celeste/CELESTEBB.jpeg" alt="Nuestro recuerdo 3"></button>
+      <button class="space-memory" data-radius=".70" data-angle="3.7"><img src="img/celeste/ESPAÑITA.jpeg" alt="Nuestro recuerdo 4"></button>
+      <button class="space-memory" data-radius=".82" data-angle="4.8"><img src="img/celeste/GOIKO.jpeg" alt="Nuestro recuerdo 5"></button>
+      <button class="space-memory" data-radius=".91" data-angle="5.8"><img src="img/celeste/GYM.jpeg" alt="Nuestro recuerdo 6"></button>
+      <button class="space-memory" data-radius=".65" data-angle="6.6"><img src="img/celeste/OASIZ.jpeg" alt="Nuestro recuerdo 7"></button>
+      <button class="space-memory" data-radius=".78" data-angle="7.5"><img src="img/celeste/SPIDERMAN.jpeg" alt="Nuestro recuerdo 8"></button>
+      <button class="space-letter" id="orbitLetter" data-radius=".88" data-angle="10.2" aria-label="Abrir la carta">
+        <span class="letter-flap"></span>
+        <span class="letter-heart">♥</span>
+      </button>
+    </div>
+    <div class="cosmic-heart" aria-hidden="true">
+      <svg viewBox="0 0 120 108" aria-hidden="true"><path d="M60 101C50 91 10 65 10 34C10 14 34 5 49 18C55 23 60 31 60 31C60 31 65 23 71 18C86 5 110 14 110 34C110 65 70 91 60 101Z"/></svg>
+    </div>
+  </main>
 
-    <section id="banner" class="section-m1">
-        <h4>Reparaciones con precisión y calidad garantizada.</h4>
-        <h2>¡Hasta <span>70% de descuento</span>! - En tu primera maquina.</h2>
-        <button class="normal">Ver mas</button>
-    </section>
-    
-    <section id="product1" class="section-p1">
-        <h2>Productos Destacados</h2>
-        <p>Innovación en Maquinaria de Pintura 2024</p>
-        <div class="pro-container">
-            <div class="pro">
-                <img src="./img/Productos/Filtros/PrefiltroAire.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Boquillas/Boquillas-Airlessco.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Pistolas/GR1PNAVBP.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Boquillas/Boquillas-GAT-500-BAR.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Maquinas/GRAB25-410.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Filtros/Filtros-de-línea.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Pistolas/Pistolas-airless-WIWA.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-            <div class="pro">
-                <img src="./img/Productos/Filtros/Filtros-de-culata.png" alt="" class="elemento">
-                <div class="des">
-                    <span>Wiwa 3022 COMBI</span>
-                    <h5>Equipo con bomba 3022 R/D COMBI</h5>
-                    <h4>150$</h4>
-                </div>
-                <a href="#"><img class="carrito" src="./img/Iconos/anadir-al-carrito.png" alt=""></a>
-            </div>
-        </div>
-    </section>
+  <dialog class="photo-viewer" id="photoViewer">
+    <button class="viewer-close" aria-label="Cerrar imagen">×</button>
+    <div class="memory-letter">
+      <div class="viewer-photo">
+        <img src="" alt="Recuerdo ampliado">
+        <span class="viewer-photo-number">01</span>
+      </div>
+      <article class="viewer-letter">
+        <span class="viewer-kicker">UN RECUERDO PARA TI</span>
+        <h2></h2>
+        <span class="letter-rule"></span>
+        <p></p>
+        <footer>
+          <span>Con todo mi corazón,</span>
+          <strong>para ti ♡</strong>
+        </footer>
+      </article>
+    </div>
+  </dialog>
 
+  <dialog class="letter-dialog" id="letterDialog">
+    <button class="letter-dialog-close" aria-label="Cerrar carta">×</button>
+    <div class="letter-scene">
+      <div class="opened-envelope">
+        <div class="opened-envelope-back"></div>
+        <article class="personal-letter">
+          <span class="personal-letter-heart">♡</span>
+          <div id="personalLetterText">
+            <p>Lo siento mucho. Siento de verdad que hayas tenido que conocer a un tonto como yo. Sé que mereces muchísimo más y quiero pedirte perdón por todo lo que te hice pasar, por mis errores y por las cosas que te hicieron daño.</p>
+            <p><strong>TE AMO</strong>, y eso es algo que tengo muy claro. No quiero perderte. Tenía pensado ir a tu casa y hablar contigo cara a cara, decirte todo lo que llevo dentro, pero cuando escuché tu voz por llamada me dio muchísima alegría y, al mismo tiempo, me puse nervioso. Tenía tantas cosas que quería decirte que no sabía ni por dónde empezar.</p>
+            <p>Poder hablar contigo por correo me dio un poco de esperanza, la esperanza de poder seguir teniendo algún tipo de comunicación contigo y de no perder por completo ese vínculo que hemos construido durante tanto tiempo.</p>
+            <p>Nunca voy a olvidar la primera vez que te vi, ni todos esos pequeños momentos que hemos compartido: nuestros contratos de amistad, comer juntos, reírnos, jugar, enfadarnos, nuestras peleitas y todas esas cosas que, aunque puedan parecer pequeñas, para mí significan muchísimo.</p>
+            <p>Y, sobre todo, nunca olvidaré lo importante que fue para mí haber sido alguien importante en tu vida. Eso es algo que siempre voy a valorar y llevar conmigo.</p>
+          </div>
+          <span class="personal-signature">Ismael Sisa</span>
+        </article>
+        <div class="opened-envelope-front"></div>
+        <div class="opened-envelope-flap"></div>
+        <span class="opened-seal">♥</span>
+      </div>
+    </div>
+  </dialog>
 
-    <section id="sm-banner" class="section-p1">
-        <div class="banner-box">
-            <h4>WIWA</h4>
-            <h2>¡Comprar ahora!</h2>
-            <span>¡No dejes pasar esta oportunidad única!</span>
-            <button class="white">Leer mas</button>
-        </div>
-        <div class="banner-box banner-box2">
-            <h4>AIRLESSCO</h4>
-            <h2>¡Comprar ahora!</h2>
-            <span>¡No dejes pasar esta oportunidad única!r</span>
-            <button class="white">Leer mas</button>
-        </div>
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>OFICINAS CENTRALES</h3>
-                <p>Disnamair, S.A.</p>
-                <p class="direcion">
-                Vereda del Alquitón 1,<br>
-                28500 Arganda del Rey<br>
-                MADRID<br>
-                (España)</p>
-            </div>
-            <div class="footer-section">
-                <h3>CONTACTO</h3>
-                <p>+34 91 361 10 51<br>
-                <a href="mailto:info@disnamair.com">info@disnamair.com</a></p>
-                <br>
-                <h3>FINANCIADO POR LA UNIÓN EUROPEA - NEXTGENERATIONEU</h3>
-                <div class="logos">
-                    <img src="./img/footer/Financiacion.png" alt="Logo UE NextGenerationEU">
-                    <img src="./img/footer/plan de recuperacion.png" alt="Logo Plan de Recuperación, Transformación y Resiliencia">
-                    <img src="./img/footer/kit digital.png" alt="Logo KIT DIGITAL">
-                </div>
-            </div>
-            
-            <div class="footer-section">
-                <h3>CHAMBERTRUST® VERIFIED BUSINESS DIRECTORY</h3>
-                <img src="./img/footer/logo.png" alt="Logo ChamberTrust">
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>© Copyright - Disnamair - Enfold WordPress Theme by Kriesi</p>
-            <div class="links">
-                <a href="#">Política de privacidad</a>
-                <a href="#">Política de cookies</a>
-                <a href="#">Declaración de Accesibilidad</a>
-                <a href="#">Mapa Web</a>
-            </div>
-        </div>
-    </footer>
+  <script src="script.js"></script>
 </body>
 </html>

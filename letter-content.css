@@ -1,0 +1,30 @@
+.personal-letter {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #a65a6b transparent;
+}
+
+.personal-letter #personalLetterText p {
+  margin: 0;
+  color: #554a46;
+  font: italic clamp(.9rem, 1.55vw, 1.08rem)/1.62 Georgia, serif;
+  text-align: left;
+}
+
+.personal-letter #personalLetterText p + p { margin-top: 1.15em; }
+.personal-letter #personalLetterText strong { color: #a21f42; letter-spacing: .05em; }
+
+.personal-signature {
+  position: static;
+  display: block;
+  margin-top: 30px;
+  color: #93334a;
+  font: italic 1rem Georgia, serif;
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .personal-letter { padding: 38px 27px 45px; }
+  .personal-letter-heart { margin-bottom: 18px; }
+  .personal-letter #personalLetterText p { font-size: .92rem; line-height: 1.58; }
+}
