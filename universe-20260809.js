@@ -5,20 +5,19 @@ const universe = document.querySelector('#universe');
 const loadingScene = document.querySelector('#loadingScene');
 const heartFill = document.querySelector('#heartFill');
 const backgroundMusic = document.querySelector('#backgroundMusic');
+const musicHeart = document.querySelector('#musicHeart');
 
 function playBackgroundMusic() {
   backgroundMusic.volume = .65;
   backgroundMusic.play().then(() => {
-    document.removeEventListener('pointerdown', playBackgroundMusic);
-    document.removeEventListener('keydown', playBackgroundMusic);
+    musicHeart.classList.add('music-playing');
+    musicHeart.setAttribute('aria-label', 'Música reproduciéndose');
   }).catch(() => {
-    // El navegador volvera a permitir el intento tras la primera interaccion.
+    musicHeart.setAttribute('aria-label', 'No se pudo reproducir la música. Inténtalo de nuevo');
   });
 }
 
-playBackgroundMusic();
-document.addEventListener('pointerdown', playBackgroundMusic);
-document.addEventListener('keydown', playBackgroundMusic);
+musicHeart.addEventListener('click', playBackgroundMusic);
 
 let width = 0;
 let height = 0;
