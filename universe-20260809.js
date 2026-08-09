@@ -4,6 +4,21 @@ const loader = document.querySelector('#loader');
 const universe = document.querySelector('#universe');
 const loadingScene = document.querySelector('#loadingScene');
 const heartFill = document.querySelector('#heartFill');
+const backgroundMusic = document.querySelector('#backgroundMusic');
+
+function playBackgroundMusic() {
+  backgroundMusic.volume = .65;
+  backgroundMusic.play().then(() => {
+    document.removeEventListener('pointerdown', playBackgroundMusic);
+    document.removeEventListener('keydown', playBackgroundMusic);
+  }).catch(() => {
+    // El navegador volvera a permitir el intento tras la primera interaccion.
+  });
+}
+
+playBackgroundMusic();
+document.addEventListener('pointerdown', playBackgroundMusic);
+document.addEventListener('keydown', playBackgroundMusic);
 
 let width = 0;
 let height = 0;
