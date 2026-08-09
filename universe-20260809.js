@@ -8,7 +8,7 @@ const backgroundMusic = document.querySelector('#backgroundMusic');
 const musicHeart = document.querySelector('#musicHeart');
 
 function playBackgroundMusic() {
-  backgroundMusic.volume = .65;
+  backgroundMusic.volume = 0.4;
   backgroundMusic.play().then(() => {
     musicHeart.classList.add('music-playing');
     musicHeart.setAttribute('aria-label', 'Música reproduciéndose');
