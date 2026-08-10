@@ -21,10 +21,13 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  z-index: 99;
+  z-index: 1000;
+  display: block;
   width: 64px;
   height: 64px;
   background: transparent;
+  pointer-events: auto;
+  touch-action: manipulation;
 }
 
 .loader {
