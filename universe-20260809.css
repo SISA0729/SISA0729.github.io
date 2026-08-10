@@ -17,6 +17,16 @@ body {
   font-family: "DM Sans", sans-serif;
 }
 
+.invisible-corner-link {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 99;
+  width: 64px;
+  height: 64px;
+  background: transparent;
+}
+
 .loader {
   position: fixed;
   z-index: 100;
