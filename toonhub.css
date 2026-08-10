@@ -1,0 +1,232 @@
+:root { color-scheme: light; }
+
+* { box-sizing: border-box; }
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+.toonhub {
+  position: relative;
+  width: 100%;
+  height: 100svh;
+  overflow: hidden;
+  color: #fff;
+  background: #f4845f;
+  transition: background-color 650ms cubic-bezier(.4, 0, .2, 1);
+  isolation: isolate;
+}
+
+.grain {
+  position: absolute;
+  z-index: 50;
+  inset: 0;
+  pointer-events: none;
+  opacity: .4;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.08'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+}
+
+.ghost-text {
+  position: absolute;
+  z-index: 2;
+  top: 18%;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font: 400 clamp(90px, 28vw, 380px)/1 "Anton", sans-serif;
+  letter-spacing: -.02em;
+  white-space: nowrap;
+  user-select: none;
+  pointer-events: none;
+}
+
+.brand {
+  position: absolute;
+  z-index: 60;
+  top: 24px;
+  left: 32px;
+  color: rgba(255,255,255,.9);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: .18em;
+  text-decoration: none;
+}
+
+.carousel {
+  position: absolute;
+  z-index: 3;
+  inset: 0;
+}
+
+.character {
+  position: absolute;
+  bottom: 12%;
+  left: 50%;
+  width: auto;
+  height: 22%;
+  margin: 0;
+  aspect-ratio: .6 / 1;
+  opacity: 1;
+  filter: blur(4px);
+  transform: translateX(-50%) scale(1);
+  transition: transform 650ms cubic-bezier(.4,0,.2,1), filter 650ms cubic-bezier(.4,0,.2,1), opacity 650ms cubic-bezier(.4,0,.2,1), left 650ms cubic-bezier(.4,0,.2,1), height 650ms cubic-bezier(.4,0,.2,1), bottom 650ms cubic-bezier(.4,0,.2,1);
+  will-change: transform, filter, opacity, left;
+}
+
+.character img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: bottom center;
+  user-select: none;
+}
+
+.character[data-role="center"] {
+  z-index: 20;
+  bottom: 0;
+  left: 50%;
+  height: 92%;
+  opacity: 1;
+  filter: none;
+  transform: translateX(-50%) scale(1.68);
+}
+
+.character[data-role="left"],
+.character[data-role="right"] {
+  z-index: 10;
+  height: 28%;
+  opacity: .85;
+  filter: blur(2px);
+}
+
+.character[data-role="left"] { left: 30%; }
+.character[data-role="right"] { left: 70%; }
+.character[data-role="back"] { z-index: 5; }
+
+.intro {
+  position: absolute;
+  z-index: 60;
+  bottom: 80px;
+  left: 6vw;
+  max-width: 320px;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+
+.description {
+  margin: 0 0 20px;
+  color: rgba(255,255,255,.85);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.controls { display: flex; gap: 12px; }
+
+.controls button {
+  display: grid;
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  place-items: center;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 150ms, background-color 150ms;
+}
+
+.controls button:hover {
+  background: rgba(255,255,255,.12);
+  transform: scale(1.08);
+}
+
+.controls svg,
+.discover svg {
+  width: 26px;
+  height: 26px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.25;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.discover {
+  position: absolute;
+  z-index: 60;
+  right: 40px;
+  bottom: 80px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: rgba(255,255,255,.95);
+  font: 400 clamp(20px, 4vw, 56px)/1 "Anton", sans-serif;
+  letter-spacing: -.02em;
+  text-decoration: none;
+  transition: opacity 200ms;
+}
+
+.discover:hover { color: #fff; }
+.discover svg { width: 32px; height: 32px; }
+
+@media (max-width: 639px) {
+  .brand { left: 16px; }
+  .ghost-text { top: 18%; }
+
+  .character {
+    bottom: 32%;
+    height: 13%;
+  }
+
+  .character[data-role="center"] {
+    bottom: 22%;
+    height: 60%;
+    transform: translateX(-50%) scale(1.25);
+  }
+
+  .character[data-role="left"],
+  .character[data-role="right"] { height: 16%; }
+  .character[data-role="left"] { left: 20%; }
+  .character[data-role="right"] { left: 80%; }
+
+  .intro {
+    bottom: 24px;
+    left: 16px;
+  }
+
+  .eyebrow { margin-bottom: 8px; font-size: 16px; }
+  .description { display: none; }
+  .controls button { width: 48px; height: 48px; }
+
+  .discover {
+    right: 16px;
+    bottom: 24px;
+    gap: 8px;
+  }
+
+  .discover svg { width: 20px; height: 20px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .toonhub,
+  .character { transition-duration: 0ms; }
+}
