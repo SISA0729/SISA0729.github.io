@@ -1,13 +1,14 @@
 const images = [
-  { src: 'img/toonhub/spain-girl.png', bg: '#F4845F' },
-  { src: 'img/toonhub/spain-boy.png', bg: '#6BBF7A' },
-  { src: 'img/toonhub/casual-girl.png', bg: '#E882B4' },
-  { src: 'img/toonhub/casual-boy.png', bg: '#6EB5FF' }
+  { src: 'img/toonhub/spain-girl.png', bg: '#F4845F', name: 'CELESTE' },
+  { src: 'img/toonhub/spain-boy.png', bg: '#6BBF7A', name: 'ISMAEL' },
+  { src: 'img/toonhub/casual-girl.png', bg: '#E882B4', name: 'CELESTE' },
+  { src: 'img/toonhub/casual-boy.png', bg: '#6EB5FF', name: 'ISMAEL' }
 ];
 
 const root = document.querySelector('#toonhub');
 const characters = [...document.querySelectorAll('.character')];
 const themeColor = document.querySelector('meta[name="theme-color"]');
+const characterName = document.querySelector('#characterName');
 let activeIndex = 0;
 let isAnimating = false;
 
@@ -30,6 +31,7 @@ function render() {
 
   root.style.backgroundColor = images[activeIndex].bg;
   themeColor.setAttribute('content', images[activeIndex].bg);
+  characterName.textContent = images[activeIndex].name;
 }
 
 function navigate(direction) {
