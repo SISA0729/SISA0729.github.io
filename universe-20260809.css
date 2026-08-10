@@ -23,8 +23,8 @@ body {
   right: 0;
   z-index: 1000;
   display: block;
-  width: 64px;
-  height: 64px;
+  width: 120px;
+  height: 120px;
   background: transparent;
   pointer-events: auto;
   touch-action: manipulation;
