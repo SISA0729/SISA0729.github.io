@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="toonhub.css?v=20260810">
+  <link rel="stylesheet" href="toonhub.css?v=20260810-2">
 </head>
 <body>
   <main class="toonhub" id="toonhub">
@@ -33,11 +33,37 @@
       </div>
     </section>
 
-    <a class="discover" href="#carousel">
+    <button class="discover" id="openVoucher" type="button">
       <span>LEER CARTA</span>
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
-    </a>
+    </button>
   </main>
-  <script src="toonhub.js?v=20260810-2"></script>
+
+  <dialog class="voucher-dialog" id="voucherDialog" aria-labelledby="voucherTitle">
+    <div class="confetti" aria-hidden="true">
+      <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+    </div>
+    <article class="voucher-card">
+      <button class="voucher-close" type="button" aria-label="Cerrar vale">×</button>
+      <span class="voucher-kicker">REGALO ESPECIAL</span>
+      <h1 id="voucherTitle">VALE POR LO QUE QUIERAS</h1>
+      <p class="voucher-store">DE <strong>SHEIN</strong></p>
+      <div class="voucher-divider"><span>♥</span></div>
+      <div class="voucher-bottom">
+        <div class="voucher-copy">
+          <p>Elige cualquier cosa que te haga ilusión.</p>
+          <strong>SOLO ISMAEL PUEDE CANJEARLO</strong>
+          <small>Código: ISMAEL-LOVE-2026</small>
+        </div>
+        <svg class="fake-qr" viewBox="0 0 21 21" role="img" aria-label="Código QR decorativo no funcional">
+          <rect width="21" height="21" fill="#fff"/>
+          <path fill="#111" d="M1 1h7v7H1zm2 2v3h3V3zm10-2h7v7h-7zm2 2v3h3V3zM1 13h7v7H1zm2 2v3h3v-3zm7-14h2v2h-2zm0 4h2v3h-2zm-1 5h3v2H9zm4-1h2v3h-2zm3 1h4v2h-4zm-7 3h2v2H9zm3-2h2v4h-2zm3 2h2v2h-2zm3-1h1v3h-1zm-9 5h3v2h-3zm5 0h2v2h-2zm3-1h3v3h-3z"/>
+        </svg>
+      </div>
+      <p class="voucher-note">QR simbólico · Un solo uso · Hecho con amor</p>
+    </article>
+  </dialog>
+
+  <script src="toonhub.js?v=20260810-3"></script>
 </body>
 </html>

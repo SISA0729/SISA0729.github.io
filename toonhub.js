@@ -53,4 +53,11 @@ document.addEventListener('keydown', event => {
   if (event.key === 'ArrowRight') navigate('next');
 });
 
+const voucherDialog = document.querySelector('#voucherDialog');
+document.querySelector('#openVoucher').addEventListener('click', () => voucherDialog.showModal());
+voucherDialog.querySelector('.voucher-close').addEventListener('click', () => voucherDialog.close());
+voucherDialog.addEventListener('click', event => {
+  if (event.target === voucherDialog) voucherDialog.close();
+});
+
 render();

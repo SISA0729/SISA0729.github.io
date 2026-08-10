@@ -179,14 +179,180 @@ body {
   align-items: center;
   gap: 14px;
   color: rgba(255,255,255,.95);
+  padding: 0;
+  background: transparent;
+  border: 0;
   font: 400 clamp(20px, 4vw, 56px)/1 "Anton", sans-serif;
   letter-spacing: -.02em;
   text-decoration: none;
+  cursor: pointer;
   transition: opacity 200ms;
 }
 
 .discover:hover { color: #fff; }
 .discover svg { width: 32px; height: 32px; }
+
+.voucher-dialog {
+  width: min(680px, calc(100vw - 28px));
+  max-width: none;
+  padding: 0;
+  overflow: visible;
+  color: #25150f;
+  background: transparent;
+  border: 0;
+}
+
+.voucher-dialog::backdrop {
+  background: rgba(20, 7, 5, .78);
+  backdrop-filter: blur(12px);
+}
+
+.voucher-card {
+  position: relative;
+  padding: clamp(30px, 6vw, 58px);
+  overflow: hidden;
+  background: linear-gradient(145deg, #fffaf3, #ffe9df);
+  border: 2px solid rgba(255,255,255,.9);
+  border-radius: 30px;
+  box-shadow: 0 30px 90px rgba(54,10,2,.45), inset 0 0 0 8px rgba(244,132,95,.12);
+  text-align: center;
+}
+
+.voucher-dialog[open] .voucher-card {
+  animation: voucher-pop 700ms cubic-bezier(.15,1.35,.35,1) both;
+}
+
+.voucher-card::before,
+.voucher-card::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  background: rgba(244,132,95,.13);
+}
+
+.voucher-card::before { top: -95px; left: -80px; }
+.voucher-card::after { right: -80px; bottom: -100px; }
+
+.voucher-close {
+  position: absolute;
+  z-index: 3;
+  top: 14px;
+  right: 16px;
+  width: 40px;
+  height: 40px;
+  color: #4b261d;
+  background: rgba(255,255,255,.65);
+  border: 0;
+  border-radius: 50%;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+.voucher-kicker {
+  display: inline-block;
+  padding: 7px 14px;
+  color: #fff;
+  background: #f15f68;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .18em;
+}
+
+.voucher-card h1 {
+  max-width: 540px;
+  margin: 22px auto 2px;
+  font: 400 clamp(40px, 8vw, 76px)/.94 "Anton", sans-serif;
+  letter-spacing: -.02em;
+}
+
+.voucher-store {
+  margin: 10px 0 0;
+  font-size: clamp(18px, 3vw, 26px);
+  letter-spacing: .16em;
+}
+
+.voucher-store strong { font-size: 1.35em; }
+
+.voucher-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 24px 0;
+  color: #f15f68;
+}
+
+.voucher-divider::before,
+.voucher-divider::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  background: rgba(75,38,29,.22);
+}
+
+.voucher-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 6vw, 48px);
+  text-align: left;
+}
+
+.voucher-copy p { margin: 0 0 12px; font-size: 16px; }
+.voucher-copy strong { display: block; color: #c83349; font-size: 13px; letter-spacing: .08em; }
+.voucher-copy small { display: block; margin-top: 9px; color: #75554d; }
+
+.fake-qr {
+  width: 126px;
+  height: 126px;
+  flex: 0 0 auto;
+  padding: 8px;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: 8px;
+  image-rendering: pixelated;
+}
+
+.voucher-note {
+  margin: 24px 0 0;
+  color: #8c6d64;
+  font-size: 10px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.confetti { position: absolute; z-index: 5; inset: -60px; pointer-events: none; }
+.confetti i { position: absolute; top: 45%; left: 50%; width: 9px; height: 18px; background: #ffd43b; opacity: 0; }
+.voucher-dialog[open] .confetti i { animation: confetti-burst 1.2s 200ms ease-out both; }
+.confetti i:nth-child(2n) { background:#f15f68; }
+.confetti i:nth-child(3n) { background:#6eb5ff; }
+.confetti i:nth-child(4n) { background:#6bbf7a; }
+.confetti i:nth-child(1) { --x:-290px; --y:-210px; --r:140deg; }
+.confetti i:nth-child(2) { --x:-210px; --y:-270px; --r:240deg; }
+.confetti i:nth-child(3) { --x:-110px; --y:-290px; --r:80deg; }
+.confetti i:nth-child(4) { --x:20px; --y:-300px; --r:190deg; }
+.confetti i:nth-child(5) { --x:140px; --y:-280px; --r:300deg; }
+.confetti i:nth-child(6) { --x:260px; --y:-210px; --r:100deg; }
+.confetti i:nth-child(7) { --x:300px; --y:-50px; --r:220deg; }
+.confetti i:nth-child(8) { --x:280px; --y:170px; --r:130deg; }
+.confetti i:nth-child(9) { --x:130px; --y:250px; --r:290deg; }
+.confetti i:nth-child(10) { --x:-80px; --y:270px; --r:170deg; }
+.confetti i:nth-child(11) { --x:-250px; --y:190px; --r:330deg; }
+.confetti i:nth-child(12) { --x:-300px; --y:10px; --r:110deg; }
+
+@keyframes voucher-pop {
+  from { opacity: 0; transform: translateY(45px) scale(.72) rotate(-3deg); }
+  65% { transform: translateY(-8px) scale(1.025) rotate(.5deg); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes confetti-burst {
+  0% { opacity: 1; transform: translate(-50%,-50%) scale(.4); }
+  70% { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--x),var(--y)) rotate(var(--r)); }
+}
 
 @media (max-width: 639px) {
   .brand { left: 16px; }
@@ -224,6 +390,10 @@ body {
   }
 
   .discover svg { width: 20px; height: 20px; }
+
+  .voucher-card { padding: 42px 24px 28px; border-radius: 24px; }
+  .voucher-bottom { flex-direction: column; text-align: center; }
+  .fake-qr { width: 108px; height: 108px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
